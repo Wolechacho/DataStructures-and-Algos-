@@ -1,2 +1,2 @@
-# DataStructures-and-Algos-
+# DataStructures-and-Algos
 Implementation of data structures and  algorithm in Golang
