@@ -1,0 +1,1 @@
+you caan pass a slice as a parameter into a function and try to append, it wont work ,s till trying to investigate
