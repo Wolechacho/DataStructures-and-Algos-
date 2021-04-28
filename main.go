@@ -1,7 +1,7 @@
 package main
 
 import (
-	"DataStructures-and-Algos/DS"
+	"DataStructures-and-Algos/DS/Arrays"
 	"fmt"
 )
 
@@ -77,8 +77,88 @@ func main() {
 	// arr := DS.ArrayTransformation([]int{6,2,3,4})
 	// fmt.Println(arr)
 
-	arr := DS.CountingElement([]int{1,1,2})
-	fmt.Println(arr)
+	// arr := DS.CountingElement([]int{1, 1, 2})
+	// fmt.Println(arr)
+
+	// i := DS.LargestUniqueNumber([]int{9,9,8,8})
+	// fmt.Println(i)
+
+	// ir := DS.IntersectionThreeSortedArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 5, 7, 9}, []int{1, 3, 4, 5, 8})
+	// fmt.Println(ir)
+
+	// c := Arrays.Check([]int{3, 4, 5, 1, 2})
+	// fmt.Println(c)
+
+	// un := Arrays.UniqueSumToZero(5)
+	// fmt.Println(un)
+
+	//[1,1,1] , 2
+
+	// gh := Arrays.SubarraySumEqualK([]int{1, 1, 1}, 2)
+	// fmt.Println(gh)
+
+	// gw := Arrays.GetWinner([]int{2, 1, 3, 5, 4, 6, 7}, 2)
+	// fmt.Println(gw)
+
+	// gw := Arrays.GetWinner2([]int{1, 11, 22, 33, 44, 55, 66, 77, 88, 99}, 1000000000)
+	// fmt.Println(gw)
+
+	//Arrays.CanArrange([]int{-1,1,-2,2,-3,3,-4,4},3)
+	//fmt.Println(can)
+
+	// booly := Arrays.CanMakeArithmeticProgression([]int{1,2,5,7,9})
+	// fmt.Println(booly)
+
+	// length := Arrays.RangeSum([]int{1,2,3,4}, 1, 10)
+	// fmt.Println(length)
+
+	// vc := Arrays.GetLuckyNumber([]int{7,7,7,7,7,7,7})
+	// fmt.Println(vc)
+
+	// result := Arrays.NumOfSubarrays([]int{100, 100, 99, 99})
+	// fmt.Println(result)
+
+	// df := Arrays.FindTheDistanceValue([]int{2, 1, 100, 3}, []int{-5, -2, 10, -3, 7}, 6)
+	// fmt.Println(df)
+
+	// cm := Arrays.CheckMajorityElement([]int{10,100,101,101}, 101)
+	// fmt.Println(cm)
+
+	// first := []int{1, 2, 3}
+	// second := []int{4, 5}
+	// third := []int{1, 2, 3}
+	// max := Arrays.MaxDistance([][]int{first, second, third})
+	// fmt.Println(max)
+
+	// ss := Arrays.ThreeSumSmaller([]int{-2, 0, 1, 3, 5}, 2)
+	// fmt.Println(ss)
+
+	// one := Arrays.MinSwap([]int{1, 0, 1, 0, 1})
+	// fmt.Println(one)
+
+	// truthy := Arrays.IsPossibleDivide([]int{1,2,3,4}, 3)
+	// fmt.Println(truthy)
+
+	// result := Arrays.GetModifiedArray([][]int{[]int{1, 3, 2}, []int{2, 4, 3}, []int{0, 2, -2}}, 5)
+	// fmt.Println(result)
+
+	// intervals := [][]int{}
+	// Arrays.Insert(intervals, []int{2, 3})
+
+	// ri := Arrays.RemoveInterval([][]int{[]int{0, 2}, []int{3, 4}, []int{5, 7}}, []int{1, 6})
+	// fmt.Println(ri)
+
+	// mg := Arrays.MergeInterval([][]int{[]int{1, 4}, []int{4, 5}})
+	// fmt.Println(mg)
+
+	// sr := Arrays.SummaryRanges([]int{0, 1, 2, 4, 5, 7})
+	// fmt.Println(sr)
+
+	// gs := Arrays.GetStrongest([]int{1, 2, 3, 4, 5}, 2)
+	// fmt.Println(gs)
+
+	gs := Arrays.DistanceBetweenBusStops([]int{1, 2, 3, 4}, 0, 1)
+	fmt.Println(gs)
 
 }
 
