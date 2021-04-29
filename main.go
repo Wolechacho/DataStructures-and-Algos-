@@ -157,8 +157,14 @@ func main() {
 	// gs := Arrays.GetStrongest([]int{1, 2, 3, 4, 5}, 2)
 	// fmt.Println(gs)
 
-	gs := Arrays.DistanceBetweenBusStops([]int{1, 2, 3, 4}, 0, 1)
-	fmt.Println(gs)
+	// gs := Arrays.DistanceBetweenBusStops([]int{1, 2, 3, 4}, 0, 1)
+	// fmt.Println(gs)
+
+	// rk := Arrays.RankTransform([]int{37, 12, 28, 9, 100, 56, 80, 5, 12})
+	// fmt.Println(rk)
+
+	rk := Arrays.NumSubarrayProductLessThanK([]int{10, 5, 2, 6}, 100)
+	fmt.Println(rk)
 
 }
 
