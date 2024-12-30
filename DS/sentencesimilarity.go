@@ -8,41 +8,23 @@ func Sentencesimilarity(sentence1, sentence2 []string, pairs [][]string) bool {
 	if len(sentence1) != len(sentence2) {
 		return false
 	}
-	hashMap := map[string]string{}
+	hashset := map[string]struct{}{}
 
-	for _, s := range pairs {
-		if _, found := hashMap[s[0]]; !found {
-			hashMap[s[0]] = s[1]
-		}
-
-		if _, found := hashMap[s[1]]; !found {
-			hashMap[s[1]] = s[0]
-		}
+	for _, pair := range pairs {
+		format := fmt.Sprintf("%s#%s", pair[0], pair[1])
+		hashset[format] = struct{}{}
 	}
 
-	for i := 0; i < len(sentence1); i++ {
-		w1 := sentence1[i]
-		w2 := sentence2[i]
-		fmt.Println(w1)
-		fmt.Println(w2)
-		if w1 == w2 {
-			continue
-		}
-		if val, found := hashMap[w1]; found {
-			if val == w2 {
-				continue
+	for i :=0; i < len(sentence1);i++{
+		if sentence1[i] != sentence2[i] {
+			format := fmt.Sprintf("%s#%s", sentence1[i], sentence2[i])
+			if _,exist := hashset[format];!exist{
+				format2 := fmt.Sprintf("%s#%s", sentence2[i], sentence1[i])
+				if _,exist2:= hashset[format2];!exist2{
+					return false
+				}
 			}
-		}
-
-		if val, found := hashMap[w2]; found {
-			if val == w1 {
-				continue
-			}
-		} else {
-			return false
-		}
+		} 
 	}
-	fmt.Println(hashMap)
 	return true
-
 }

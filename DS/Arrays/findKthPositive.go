@@ -4,12 +4,12 @@ import "fmt"
 
 func findKthPositive(arr []int, k int) int {
 	m := []int{}
-	var l = 1
+	var lowerBoundary = 1
 	for i := 0; i < len(arr); i++ {
-		for j := l; j < arr[i]; j++ {
+		for j := lowerBoundary; j < arr[i]; j++ {
 			m = append(m, j)
 		}
-		l = arr[i] + 1
+		lowerBoundary = arr[i] + 1
 	}
 
 	if len(m) < k {

@@ -11,8 +11,8 @@ func MaxDistance(matrix [][]int) int {
 	minHead := firstArr[0]
 	maxHead := firstArr[len(firstArr)-1]
 
-	for i := 0; i < len(matrix); i++ {
-		currArr := matrix[1]
+	for i := 1; i < len(matrix); i++ {
+		currArr := matrix[i]
 		minCurrVal := currArr[0]
 		maxCurrVal := currArr[len(currArr)-1]
 
@@ -20,10 +20,9 @@ func MaxDistance(matrix [][]int) int {
 		gh := math.Abs(float64(maxHead - minCurrVal))
 
 		mc := math.Max(vf, gh)
-
 		maxDistnce = math.Max(maxDistnce, mc)
 
-		if minCurrVal > minHead {
+		if minCurrVal < minHead {
 			minHead = minCurrVal
 		}
 

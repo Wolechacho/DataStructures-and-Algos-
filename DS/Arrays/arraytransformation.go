@@ -1,5 +1,6 @@
 package Arrays
 
+// ArrayTransformation
 func ArrayTransformation(nums []int) []int {
 	flag := true
 
@@ -18,7 +19,6 @@ func ArrayTransformation(nums []int) []int {
 				change[i] = -1
 			}
 		}
-
 		if flag {
 			for i := 0; i < len(nums); i++ {
 				nums[i] += change[i]

@@ -1,24 +1,20 @@
 package Arrays
 
-import "sort"
+import (
+	"sort"
+)
 
-func CanMakeArithmeticProgression(nums []int) bool {
-	sort.Ints(nums)
+//CanMakeArithmeticProgression find if two consecutive
+//element as thr same difference
+//Return true if valid else return false,
+func CanMakeArithmeticProgression(arr []int) bool {
+	sort.Ints(arr)
 
-	difference := nums[1] - nums[0]
-	count := 1
-	for i := 1; i < len(nums)-1; i++ {
-		if nums[i+1]-nums[i] == difference {
-			count++
-
-			if count == 2 {
-				return true
-			}
-		} else {
-			count = 1
-			difference = nums[i+1] - nums[i]
+	difference := arr[1] - arr[0]
+	for i := 1; i < len(arr)-1; i++ {
+		if arr[i+1]-arr[i] != difference {
+			return false
 		}
-
 	}
-	return false
+	return true
 }

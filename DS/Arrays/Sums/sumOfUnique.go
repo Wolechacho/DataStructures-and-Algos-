@@ -1,4 +1,4 @@
-package Arrays
+package Sums
 
 func sumOfUnique(nums []int) int {
 	m := map[int]int{}

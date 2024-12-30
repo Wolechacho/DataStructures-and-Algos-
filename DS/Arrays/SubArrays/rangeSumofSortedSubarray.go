@@ -1,4 +1,4 @@
-package Arrays
+package SubArrays
 
 import (
 	"fmt"
@@ -27,10 +27,10 @@ func RangeSum(nums []int, left, right int) float64 {
 	var b float64 = 0
 	for i := left; i <= right; i++ {
 		b = ans + float64(sumArray[i-1])
-		fmt.Println("b", b)
+		//fmt.Println("b", b)
 
 		ans = math.Mod(b, mod)
-		fmt.Println("ans", ans)
+		//fmt.Println("ans", ans)
 		
 		fmt.Println()
 	}

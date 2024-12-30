@@ -1,15 +1,15 @@
 package Arrays
 
 func removeDuplicates(nums []int) int {
-	uniqueArray := []int{}
-	currentElem := -1
-
-	for _, num := range nums {
-		if currentElem != num {
-			uniqueArray = append(uniqueArray, num)
-			currentElem = num
-		}
-	}
-
-	return len(uniqueArray)
+    if len(nums) == 0{
+        return 0
+    } 
+    i := 0
+    for j := 1; j < len(nums); j++ {
+        if nums[j] != nums[i] {
+            i++
+            nums[i] = nums[j]
+        }
+    }
+    return i + 1
 }

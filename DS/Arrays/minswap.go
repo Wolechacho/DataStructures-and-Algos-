@@ -6,7 +6,6 @@ import (
 
 func MinSwap(data []int) int {
 	ones := 0
-	length := len(data)
 	for _, num := range data {
 		if num == 1 {
 			ones++
@@ -23,6 +22,8 @@ func MinSwap(data []int) int {
 		}
 	}
 	maxOnes := windowOnes
+	length := len(data)
+
 	for i := ones; i < length; i++ {
 		if data[i] == 1 {
 			windowOnes++

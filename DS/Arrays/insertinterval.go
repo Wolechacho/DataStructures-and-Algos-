@@ -1,31 +1,30 @@
 package Arrays
 
 import (
-	"fmt"
+	"math"
 	"sort"
 )
 
-func Insert(intervals [][]int, newInterval []int) [][]int {
+func insert(intervals [][]int, newInterval []int) [][]int {
 	var mergeIds []int
-	for i, interval := range intervals {
-		if isOverlapping(interval, newInterval) {
-			newInterval = merge(interval, newInterval)
+	for i := 0; i < len(intervals); i++ {
+		current := intervals[i]
+
+		if current[0] <= newInterval[1] && newInterval[0] <= current[1] {
+			newInterval[0] = int(math.Min(float64(newInterval[0]), float64(current[0])))
+			newInterval[1] = int(math.Max(float64(newInterval[1]), float64(current[1])))
 			intervals[i] = newInterval
 			mergeIds = append(mergeIds, i)
 		}
 	}
 
-	fmt.Println("mergeId", mergeIds)
 	if len(mergeIds) > 0 {
 		start := mergeIds[0]
 		end := mergeIds[len(mergeIds)-1]
 		if start == end {
 			return intervals
 		} else {
-			fmt.Println("Intervals before : ", intervals)
 			intervals = append(intervals[0:start], intervals[end:len(intervals)]...)
-			fmt.Println("Intervals after : ", intervals)
-
 			return intervals
 		}
 	} else {
@@ -35,38 +34,4 @@ func Insert(intervals [][]int, newInterval []int) [][]int {
 		})
 		return intervals
 	}
-}
-
-func isOverlapping(a []int, b []int) bool {
-	booly := (a[1] < b[0] || b[1] < a[0])
-	return !booly
-
-	// if b[0] < a[1] {
-	// 	//return for overlap
-	// 	return true
-	// }
-
-	// if b[1] < a[0] {
-	// 	return true
-	// }
-	//return false
-}
-
-func merge(a []int, b []int) []int {
-
-	var start int
-	var end int
-	if a[0] < b[0] {
-		start = a[0]
-	} else {
-		start = b[0]
-	}
-
-	if a[1] > b[1] {
-		end = a[1]
-	} else {
-		end = b[1]
-	}
-
-	return []int{start, end}
 }

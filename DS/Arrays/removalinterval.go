@@ -20,3 +20,22 @@ func RemoveInterval(intervals [][]int, toBeRemoved []int) [][]int {
 	}
 	return res
 }
+
+func RemoveInterval1(intervals [][]int, toBeRemoved []int) [][]int {
+	result := [][]int{}
+	for _, interval := range intervals {
+		if interval[0] <= toBeRemoved[1] && toBeRemoved[0] <= interval[1]{
+			if interval[0] < toBeRemoved[0] {
+				result = append(result, []int{interval[0], toBeRemoved[0]})
+			}
+
+			if interval[1] > toBeRemoved[1] {
+				result = append(result, []int{toBeRemoved[1], interval[1]})
+			}
+		} else {
+			result = append(result, []int{interval[0], interval[1]})
+		}
+	}
+
+	return result
+}

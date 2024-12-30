@@ -2,17 +2,17 @@ package Arrays
 
 func CountingElement(arr []int) int {
 	m := map[int]int{}
-	for _, num := range arr {
-		m[num] = 1
+	count := 0
+	for i := 0; i < len(arr); i++ {
+		m[arr[i]]++
 	}
 
-	count := 0
 	for _, num := range arr {
-		if _, exist := m[num+1]; exist {
+		r := num + 1
+		if _, exist := m[r]; exist {
 			count++
 		}
 	}
 
 	return count
-
 }

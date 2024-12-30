@@ -1,4 +1,4 @@
-package Arrays
+package Sums
 
 func UniqueSumToZero(num int) []int {
 	arr := make([]int, num)

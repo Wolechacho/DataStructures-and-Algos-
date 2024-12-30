@@ -1,4 +1,6 @@
-package Arrays
+package SubArrays
+
+import "fmt"
 
 func SubarraySumEqualK(nums []int, k int) int {
 	m := map[int]int{0: 1}
@@ -10,6 +12,7 @@ func SubarraySumEqualK(nums []int, k int) int {
 		if _, exist := m[sum-k]; exist {
 			count += m[sum-k]
 		}
+		fmt.Println(m)
 		m[sum]++
 	}
 	return count

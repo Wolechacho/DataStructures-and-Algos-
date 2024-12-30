@@ -1,5 +1,7 @@
 package Arrays
 
+import "fmt"
+
 func GetModifiedArray(updates [][]int, length int) []int {
 	ans := make([]int, length)
 
@@ -13,8 +15,10 @@ func GetModifiedArray(updates [][]int, length int) []int {
 			ans[end+1] += -inc
 		}
 
-	}
+		fmt.Println(ans)
 
+	}
+	fmt.Println("After")
 	for i := 1; i < length; i++ {
 		ans[i] += ans[i-1]
 	}

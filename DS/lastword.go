@@ -1,7 +1,9 @@
 package DS
 
+
 func lastWord(s string) int {
 	lastWhiteSpaceIndex := 0
+
 	for i, d := range s {
 		if d == 32 {
 			lastWhiteSpaceIndex = i

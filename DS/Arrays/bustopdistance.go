@@ -10,6 +10,7 @@ func DistanceBetweenBusStops(distance []int, start, destination int) int {
 		totalDistance += d
 	}
 
+
 	min := int(math.Min(float64(start), float64(destination)))
 	max := int(math.Max(float64(start), float64(destination)))
 
