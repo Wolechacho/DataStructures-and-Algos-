@@ -3,7 +3,6 @@ package main
 import (
 	//"DataStructures-and-Algos/DS/Arrays"
 	//"DataStructures-and-Algos/DS/Arrays/SubArrays"
-	"DataStructures-and-Algos/DS"
 	"fmt"
 )
 
@@ -242,7 +241,7 @@ func main() {
 	// fmt.Println(mx)
 
 	word := "Adewole"
-	result := DS.ReverseStringRecursion(word)
+	result := ReverseStringRecursion(word)
 	fmt.Println(result)
 
 }
